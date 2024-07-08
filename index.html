@@ -26,11 +26,41 @@
             text-align: center;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var mainText = document.querySelector('.main-text');
+            var texts = [
+                'd3pl0rado',
+                'd3pl0r4do',
+                'deplor4do',
+                'the best' ,
+                'deplorado'
+            ];
+            var currentIndex = 0;
+            
+            function alternateText() {
+                mainText.textContent = texts[currentIndex];
+                currentIndex = (currentIndex + 1) % texts.length; // Avança para o próximo texto circularmente
+            }
+
+            // Alterna o texto a cada segundo
+            setInterval(alternateText, 500);
+        });
+    </script>
 </head>
 <body>
-    <div class="main-text">deplorado</div>
+    <div class="main-text">d3pl0rado</div>
     <div class="sub-text">Me chame no discord para poder fazer uma otimização barata e boa</div>
-    <div class="sub-text">Discord:  Deplorado</div>
-    <div class="sub-text">ID:  1182592368537518180</div>
+    <div class="sub-text">Discord: Deplorado</div>
+    <div class="sub-text">ID: 1182592368537518180</div>
+    <h1>DEPOIS (180 FPS)</h1>
+    <img src="file:///C:/Users/g/Downloads/2.png" alt="antes">
+    <h1>ANTES (158 FPS)</h1>
+    <img src="file:///C:/Users/g/Downloads/image1.png" alt="depois">
+    <p class="texto">CONFIG DO PC</p>
+    <p class="texto">I3-3240</p>
+    <p class="texto">GT 710</p>
+    <p class="texto">8GB DDR3 1600MHZ</p>
+    <div class="sub-text">Mesmo sendo mais ou menos 30 fps de diferença a estabilidade ficou otima entre 165 e 170 andando pelo mapa</div>
 </body>
 </html>
